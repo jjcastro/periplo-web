@@ -1,0 +1,86 @@
+
+<div id="first">
+	<div class="bkg-highlight"></div>
+	
+	<div class="container">
+
+		<img class="porc-coin" src="assets/img/porc-with-coin.png">
+
+		<a name="about"></a>
+		<h1>A brand new way to save.</h1>
+
+		<p>
+		Porc makes saving and managing your
+		money <i>quicker, easier and a lot more fun</i>.
+		</p>
+
+		<ul class="main-links">
+			<li><a ui-sref="app.overview">Go to the app</a></li>
+			<li><a href="#" ng-click="main.openDialogA()">iPhone alpha</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="second">
+	
+	<div class="container">
+		<img class="iphone-mock" src="assets/img/iphone-mock.png">
+		<a name="features"></a>
+		<h1>Too much <span id="month">month</span> left at the end of the <span id="money">money</span>?</h1>
+
+		<p>
+			Porc is an expense tracking app that puts <i>you</i> in control of your finances, using smart reports and contextual predictions to help you understand the way you spend and manage your money.
+		</p>
+		<p>
+			The best part is, <i>you don’t have to do much at all!</i> Porc does all the hard work for you. Just set some budgets for your goals, input what you spend, and sit back. Porc takes care of the rest.
+		</p>
+	</div>
+
+</div>
+
+<div id="third">
+<div class="container">
+	<h2>Join Porc today, <b>for free</b>.</h2>
+</div>
+</div>
+
+<div id="footer">
+<div class="container">
+	<span>Designed and developed by <a href="http://jjcastro.com">myself</a>, with tons of <span class="glyphicon glyphicon-heart"></span> in Bogotá.</span>
+	<div class="git-buttons"><iframe class="star-btn" src="https://ghbtns.com/github-btn.html?user=jjcastro&repo=porc&type=star&count=false&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+	<iframe class="follow-btn" src="https://ghbtns.com/github-btn.html?user=jjcastro&type=follow&count=false&size=large" frameborder="0" scrolling="0" width="220px" height="30px"></iframe></div>
+	<span class="copyright">iPhone is a trademark of Apple Inc.</span>
+</div>
+</div>
+
+<div id="bkg-gray" ng-if="main.dialogOpenA || main.dialogOpenB">
+	<div class="popup" ng-if="main.dialogOpenA">
+		<a href="#" ng-click="main.closeDialogA()"><span class="glyphicon glyphicon-remove"></span></a>
+		<h2>iPhone alpha is coming soon!</span></h2>
+		<p>The iPhone app is in active development and testing.
+			 In the meanwhile, you can use the app on a mobile browser such as Chrome or Safari.
+		</p>
+	</div>
+
+	<div class="popup clearfix" ng-if="main.dialogOpenB">
+		<a href="#" ng-click="main.closeDialogB()"><span class="glyphicon glyphicon-remove"></span></a>
+		<h2>Join Porc!</span></h2>
+		<p>Porc is currently ongoing closed beta testing before launch.
+			 Enter your email below to be notified when the closed beta ends and you can join Porc!</p>
+
+		<form class="form-inline clearfix">
+			<div class="form-group">
+				<input type="email" class="form-control" placeholder="Email" ng-model="email" required>
+			</div>
+
+			<button type="submit" class="button-red email-btn" ng-click="main.sendEmail(email)">
+				<span>Notify</span>
+			</button>
+
+			<div ng-show="main.newsletter" class="bouncer alert alert-success login-info">{{main.newsletter}}</div>
+		</form>
+		
+	</div>
+</div>
+
+
